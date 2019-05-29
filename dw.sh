@@ -1,6 +1,7 @@
 #!/bin/bash
 # DW LOCATOR V.01
 # DW SQUAD
+# Github: https://github.com/19245/DWLOCATOR
 
 
 trap 'printf "\n";stop;exit 1' 2
@@ -380,10 +381,8 @@ printf "\e[1;93m  |  |  |  |  \            /          \   \    |  |  |  |   |  |
 printf "\e[1;93m  |  '--'  |   \    /\    /       .----)   |   |  `--'  '--.|  `--'  |  /  _____  \  |  '--'  | \e[0m\n"
 printf "\e[1;93m  |_______/     \__/  \__/        |_______/     \_____\_____\\______/  /__/     \__\ |_______/  v1.1 \e[0m\n"
 printf "\n"
-printf "\e[1;93m :::\e[0m\e[1;77m PROGRAM BY DW SQUAD\e[0m\n"
-printf "\e[1;93m :::\e[0m\e[1;77m This script not for evil\e[0m\n"
+printf "\e[1;93m :::\e[0m\e[1;77m DW SQUAD\e[0m\n"
  
-
 }
 banner
 dependencies
