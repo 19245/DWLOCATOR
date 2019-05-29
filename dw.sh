@@ -1,5 +1,5 @@
 #!/bin/bash
-# DW LOCATOR V.01
+# DW LOCATOR v1.1
 # DW SQUAD
 # Github: https://github.com/19245/DWLOCATOR
 
