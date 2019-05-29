@@ -387,3 +387,4 @@ printf "\e[1;93m :::\e[0m\e[1;77m DW SQUAD\e[0m\n"
 banner
 dependencies
 start1
+
